@@ -13,7 +13,7 @@ const router = express.Router();
 router.post("/new", jwtAuth, createCart);
 router.get("/", jwtAuth, getAllCarts);
 router.get("/:userId", jwtAuth, getUserCart);
-router.put("/update/:userId", jwtAuth, updateCart);
-router.delete("/delete/:userId", jwtAuth, deleteCart);
+router.put("/update/:userId/:id", jwtAuth, updateCart);
+router.delete("/delete/:id", jwtAuth, deleteCart);
 
 export default router;
