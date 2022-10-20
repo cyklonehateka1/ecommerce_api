@@ -38,7 +38,7 @@ export const getOneProduct = async (req, res, next) => {
     if (!product) return next(errorHandler(404, "Product not found"));
     res.status(200).json(product);
   } catch (error) {
-    return next(errorHandler(404, "Product not found"));
+    return next(error);
   }
 };
 
